@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Paint
+GenericName=Image Editor
+Comment=Windows 10 Paint, running under Wine
+Exec="@LAUNCHER@" %f
+Icon=mspaint-wine
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;
+MimeType=image/bmp;image/png;image/jpeg;image/gif;image/tiff;image/x-icon;
+StartupWMClass=mspaint.exe

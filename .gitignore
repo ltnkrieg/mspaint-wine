@@ -1,0 +1,4 @@
+# Build by-products of shims/build.sh
+shims/bin/*.lib
+shims/bin/*.pdb
+__pycache__/

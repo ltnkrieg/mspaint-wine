@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Start Windows 10 Paint under Wine. Made by mspaint-wine's install.sh.
+export WINEPREFIX="@PREFIX@"
+export WINEDEBUG="${WINEDEBUG:--all}"
+WINE="@WINE@"
+# Give Paint Windows paths. Wine maps drive Z: to /.
+args=()
+for a in "$@"; do
+    if [ -e "$a" ]; then
+        a=$(realpath -- "$a")
+        a="Z:${a//\//\\}"
+    fi
+    args+=("$a")
+done
+exec "$WINE" 'C:\mspaint\mspaint.exe' "${args[@]}"
